@@ -57,7 +57,16 @@ public class ArrayIns {
     }
 
     public void test() {
-        int in,out;
+        int in,out,min;
+        for(out=0;out<nElems-1;out++){
+            min=out;
+            for(in=out+1;in<nElems;in++){
+                if(a[in]<a[min]){
+                    min=in;
+                }
+            }
+            swap(out,min);
+        }
 
     }
 
